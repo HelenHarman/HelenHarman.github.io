@@ -56,3 +56,23 @@
     padding-left: 0;
     padding-right: 20;
 }
+
+
+.ul_noIndent
+{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.li_noFormat
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.p_indent
+{
+    padding-left: 20px;
+    
+}
