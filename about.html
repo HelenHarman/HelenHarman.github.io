@@ -49,7 +49,7 @@
                 <div class="hidden-md hidden-lg hidden-sm">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="btn-navbar" data-toggle="dropdown">More</a>
+                            <a href="#" class="btn-navbar" data-toggle="dropdown">More<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <!--<ul class="nav navbar-nav">-->
                                 <li><a href="index.html">Home</a></li>
@@ -60,6 +60,19 @@
                             </ul>
                             
                         </li>
+                        
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#about">About Me</a></li>
+                                <li><a href="#cern">CERN</a></li>
+                                <li><a href="#employment">Employment</a></li>
+                                <li><a href="#education">Education</a></li>
+                                
+                            </ul>
+                            
+                        </li>
+                        
                     </ul>
                 </div>
                 
@@ -68,7 +81,26 @@
         
         <div class="container theme-showcase page-wrapper" role="main">
             <br /><br /><br />
+            
+            
+            <div class="hidden-md hidden-lg hidden-sm"><br /><br /></div>
+            
+            
+            <div class="list-group nv_width pull-right hidden-xs">
+                <a href="#" class="list-group-item disabled">
+                    <strong>About</strong>
+                </a>
+                
+                <a href="#about" class="list-group-item">About Me</a>
+                <a href="#cern" class="list-group-item">CERN</a>
+                <a href="#employment" class="list-group-item">Employment</a>
+                <a href="#education" class="list-group-item">Education</a>
+
+            </div>
+            
             <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="sm_width pull-left">
+            <a id="about"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">About Me</h3>
@@ -79,7 +111,7 @@
             </div>
             
             
-            <a id="CERN"></a>
+            <a id="cern"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Summary of my time at CERN</h3>
@@ -89,6 +121,8 @@
                 </div>
             </div>
             
+            
+            <a id="employment"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Employment</h3>
@@ -100,7 +134,7 @@
                         </li>
                         
                         <li class="li_noFormat"><p><strong>(07/2013 - 06/2014) CERN - Technical Student:</strong></p>
-                            <p class="p_indent">I worked in the EN-ICE-SCD section. This section provides software and a support service to the experiments for some of the control systems being used. I worked on the testing and quality assurance of this software. I developed testing and static code analysis software. I reviewed C++ code, CTRL code and graphical user interfaces. See <a href="#CERN">"Summary of my time at CERN"</a> for more details.</p>
+                            <p class="p_indent">I worked in the EN-ICE-SCD section. This section provides software and a support service to the experiments for some of the control systems being used. I worked on the testing and quality assurance of this software. I developed testing and static code analysis software. I reviewed C++ code, CTRL code and graphical user interfaces. See <a href="#cern">"Summary of my time at CERN"</a> for more details.</p>
                         </li>
                         
                         
@@ -116,6 +150,7 @@
             
             
             
+            <a id="education"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Education</h3>
@@ -138,7 +173,7 @@
                 </div>
             </div>
             
-            
+            </div>
             
             <!-- Bootstrap core JavaScript
              ================================================== -->
