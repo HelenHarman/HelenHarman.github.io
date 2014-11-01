@@ -86,3 +86,29 @@
     
     
 }
+
+.sm_width
+{
+    width: 85%;
+    max-width: calc(100% - 159px);
+    padding-right: 10px;
+    
+}
+.nv_width
+{
+    padding-top:0px;
+    min-width: 159px;
+    width: 15%;
+    right: 45px;
+    position: fixed;
+    
+}
+
+.li_inline
+{
+    white-space: nowrap;
+    display: inline;
+    list-style:none;
+    max-width: 50px;
+}
+
