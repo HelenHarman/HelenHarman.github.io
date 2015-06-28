@@ -1,0 +1,20 @@
+@media (min-width: 766px) {
+    .posLeft {
+        float: left;
+        width: 85%;
+        max-width: calc(100% - 180px);
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .posLeft {
+        width: 100%;
+        float: right;
+        min-width: 100%;
+    }
+}
+
+.noNewLine{
+    display:inline;
+}
