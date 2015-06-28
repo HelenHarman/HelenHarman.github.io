@@ -32,9 +32,9 @@ for dir in dirs:
 stringLinks = ''
 for dir in dirs:
     if int(dir) == highest :
-        stringLinks = stringLinks + '<a href="photos.html">' + dir + '</a>'
+        stringLinks = '<a class="btn btn-link" role="button" href="photos.html">' + dir + '</a> ' + stringLinks
     else:
-        stringLinks = stringLinks + '<a href="' + dir + 'photos.html">' + dir + '</a>'
+        stringLinks = '<a class="btn btn-link" role="button" href="' + dir + 'photos.html">' + dir + '</a> ' + stringLinks
 
 
 file = open('../include/photoSection.html', 'r')
@@ -54,8 +54,31 @@ for dir in dirs:
     
     
     stringToWrite = '<heading.html>'
-    stringToWrite = stringToWrite + stringLinks + '<div>'
+    stringToWrite = stringToWrite + '<div class="posLeft">' + stringLinks#sm_width  pull-left
 
+
+
+    stringToWrite = stringToWrite + '<div class="dropdown hidden-md hidden-lg hidden-sm noNewLine">\
+        <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Photos<span class="caret"></span></button>\
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">'
+            
+    for photoSectionDir in os.listdir('../images/photos/' + dir):
+        if photoSectionDir == '.DS_Store':
+            continue
+        stringToWrite = stringToWrite + '<li role="presentation"><a role="menuitem" tabindex="-1" href="#' + photoSectionDir + '">' + photoSectionDir.replace('_', ' ') + '</a></li>'
+    stringToWrite = stringToWrite + '</ul></div>'
+
+            
+
+    # the right hand nav bar
+    stringToWrite = stringToWrite + '<div class="list-group nv_width pull-right hidden-xs"> <a href="#" class="list-group-item disabled"><strong>Photos</strong></a>'
+    for photoSectionDir in os.listdir('../images/photos/' + dir):
+        if photoSectionDir == '.DS_Store':
+            continue
+        stringToWrite = stringToWrite + '<a href="#' + photoSectionDir + '" class="list-group-item">' + photoSectionDir.replace('_', ' ') + '</a>'
+    stringToWrite = stringToWrite + '</div>'
+
+    # the photo sections
     for photoSectionDir in os.listdir('../images/photos/' + dir):
         if photoSectionDir == '.DS_Store':
             continue

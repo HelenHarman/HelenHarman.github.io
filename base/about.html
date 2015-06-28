@@ -1,7 +1,7 @@
 <heading.html>
             
             
-            <div class="hidden-md hidden-lg hidden-sm"><br /><br /></div>
+            <div class="hidden-md hidden-lg hidden-sm hidden-xs"><br /><br /></div>
             
             
             <div class="list-group nv_width pull-right hidden-xs">
@@ -9,7 +9,7 @@
                     <strong>About</strong>
                 </a>
                 
-                <a href="#about" class="list-group-item">About Me</a>
+                <a href="#about" class="list-group-item">About me</a>
                 <a href="#cern" class="list-group-item">CERN</a>
                 <a href="#employment" class="list-group-item">Employment</a>
                 <a href="#education" class="list-group-item">Education</a>
@@ -17,7 +17,22 @@
             </div>
             
             <!-- Main jumbotron for a primary marketing message or call to action -->
-            <div class="sm_width pull-left">
+            <div class="posLeft">
+                
+            <div class="dropdown hidden-md hidden-lg hidden-sm noNewLine">
+            <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">About<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#about">About me</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#cern">CERN</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#employment">Employment</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#education">Education</a></li>
+                </ul>
+            </div>
+                
+                
+                
+                
+                
             <a id="about"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
