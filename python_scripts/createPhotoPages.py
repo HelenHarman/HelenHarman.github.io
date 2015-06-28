@@ -12,7 +12,7 @@ def photoString(photoDir):
             continue
         
         newPhoto = singlePhoto.replace('<replacePhotoPath>', photoDir.replace('../', '') + '/' + photoName)
-        newPhoto = newPhoto.replace('<replacePhotoName>', photoName.split('.')[0].replace('_', ' '))
+        newPhoto = newPhoto.replace('<replacePhotoName>', photoName.split('.')[0])
         string = string + newPhoto
     
     return string
