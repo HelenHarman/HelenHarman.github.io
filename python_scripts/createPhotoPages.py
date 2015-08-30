@@ -1,4 +1,4 @@
-import os
+import os, time
 
 #--------------------------------------------------------
 
@@ -8,10 +8,11 @@ import os
 def photoString(photoDir):
     string = ''
     for photoName in os.listdir(photoDir):
-        if photoName == '.DS_Store':
+        if photoName == '.DS_Store' or photoName == 'small' :
             continue
         
         newPhoto = singlePhoto.replace('<replacePhotoPath>', photoDir.replace('../', '') + '/' + photoName)
+        newPhoto = newPhoto.replace('<replacePhotoPathSmall>', photoDir.replace('../', '') + '/small/' + photoName)
         newPhoto = newPhoto.replace('<replacePhotoName>', photoName.split('.')[0].replace('_', ' '))
         string = string + newPhoto
     
@@ -22,7 +23,7 @@ def photoString(photoDir):
 def getLinksHtmlString(dirs):
     stringLinks = ''
     for dir in dirs:
-        if int(dir) == highest :
+        if os.path.getctime('../images/photos/' + dir) == highest :
             stringLinks = '<a class="btn btn-link" role="button" href="photos.html">' + dir + '</a> ' + stringLinks
         else:
             stringLinks = '<a class="btn btn-link" role="button" href="' + dir + 'photos.html">' + dir + '</a> ' + stringLinks
@@ -76,8 +77,8 @@ highest = 0
 dirs.remove('.DS_Store')
 
 for dir in dirs:
-    if (int(dir) > highest) :
-        highest = int(dir) # highest is the latest, which should be the main photos page
+    if (os.path.getctime('../images/photos/' + dir) < highest) :
+        highest = os.path.getctime('../images/photos/' + dir) # highest is the latest, which should be the main photos page
 
 
 file = open('../include/photoSection.html', 'r')
@@ -114,7 +115,7 @@ for dir in dirs:
     stringToWrite = stringToWrite + '</div><ending.html>'
 
     # write photo.html page
-    if int(dir) == highest :
+    if os.path.getctime('../images/photos/' + dir) == highest :
         fileToWrite = open('../base/photos.html', 'w')
     else:
         fileToWrite = open('../base/' + dir + 'photos.html', 'w')
