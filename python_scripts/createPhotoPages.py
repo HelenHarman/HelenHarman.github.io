@@ -1,4 +1,4 @@
-import os, time
+import os, time, sys
 
 #--------------------------------------------------------
 
@@ -72,12 +72,12 @@ def getPhotoSection(dir, photoSection):
 #--------------------------------------------------------
 
 dirs = os.listdir('../images/photos')
-highest = 0
+highest = 0#sys.maxint
 
 dirs.remove('.DS_Store')
 
 for dir in dirs:
-    if (os.path.getctime('../images/photos/' + dir) < highest) :
+    if (os.path.getctime('../images/photos/' + dir) > highest) :
         highest = os.path.getctime('../images/photos/' + dir) # highest is the latest, which should be the main photos page
 
 
@@ -113,7 +113,6 @@ for dir in dirs:
     stringToWrite = stringToWrite + photoSlideShow
     
     stringToWrite = stringToWrite + '</div><ending.html>'
-
     # write photo.html page
     if os.path.getctime('../images/photos/' + dir) == highest :
         fileToWrite = open('../base/photos.html', 'w')
