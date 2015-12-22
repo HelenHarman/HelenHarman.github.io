@@ -22,12 +22,13 @@ def photoString(photoDir):
 
 def getLinksHtmlString(dirs):
     stringLinks = ''
+    highestLink = ''
     for dir in dirs:
         if os.path.getctime('../images/photos/' + dir) == highest :
-            stringLinks = '<a class="btn btn-link" role="button" href="photos.html">' + dir + '</a> ' + stringLinks
+            highestLink = '<a class="btn btn-link" role="button" href="photos.html">' + dir + '</a> '
         else:
             stringLinks = '<a class="btn btn-link" role="button" href="' + dir + 'photos.html">' + dir + '</a> ' + stringLinks
-    return stringLinks
+    return highestLink + stringLinks
 
 #--------------------------------------------------------
 
