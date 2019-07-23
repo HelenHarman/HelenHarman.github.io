@@ -65,7 +65,14 @@
                 <div class="hidden-md hidden-lg hidden-sm">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="btn-navbar pull-right" data-toggle="dropdown">More<span class="caret"></span></a>
+                        <!--<button type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#bs-example-navbar-collapse-1">
+        Menu
+      </button>-->
+                            <!-- <a href="#" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#bs-example-navbar-collapse-1">Menu</a>-->
+                            <a href="#" class="navbar-toggle pull-right" data-toggle="dropdown">
+                            <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span></a><!--btn-navbar  More<span class="caret"></span>-->
                             <ul class="dropdown-menu" role="menu">
                                 <!--<ul class="nav navbar-nav">-->
                                 <li><a href="index.html">Home</a></li>
@@ -125,14 +132,42 @@
                     <h3 class="panel-title">About Me</h3>
                 </div>
                 <div class="panel-body">
-                <p> I am currently studing a PhD at UGent. PhD topic: Context-aware task execution of mobile robots in collaborative smart environments. Funded by FWO, SB fellowship.</p> 
-                    <p> My MEng in Software Engineer was gained at Aberystwyth University. Former chair of the Aberystwyth University BCS Student Chapter and CompSciSoc; and member of the BCS Mid-Wales Branch committee. </p> 
+                <p> <strong> Research topics: </strong> Symbolic AI; Task Planning; Goal Recognition; Goal Recognition Design <a href="research.html">[Publications]</a> </p>
+                
+                
+                <p> I am currently pursing a PhD at Ghent University, funded by FWO, SB fellowship. My teaching activities include assisting with the pratical classes for a System Design course (including writing worksheets and exams) and writting master's thesis proposals. </p> <!--PhD title: Context-aware task execution of mobile robots in collaborative smart environments.-->
+                
+                
+                    <p> At Aberystwyth University I gained an MEng in Software Engineering. Whilst in Aberystwyth, I setup and chaired the Aberystwyth University BCS Student Chapter and CompSciSoc; and I was a member of the BCS Mid-Wales Branch committee. </p> 
+                    
+                    <p> My MEng dissertation, titled "Artificial Immune System For Tracking and Detecting Objects in Real-Time"​, gave me as insight into working on a research project; and allowed me to gain some knowledge of Machine Learning and Computer Vision.</p> 
 
- <p> I have experince in a wide range of programming languages including C++, C, Java, Python, Haskell, Pascal, PHP, Scala and Perl. I am keen to learn new skills and to get involved with different aspects of software engineering.</p> 
+                <p> I am keen to learn new skills and to get involved with different aspects of research. In the furture I hope to collaborate with other researches and become involved in running conferences, workshops and events. Applying AI methods to a different, cross-disciplary domain is my ideal next research direction. </p>
  
- <p> My dissertation titled "Artificial Immune System For Tracking and Detecting Objects in Real-Time"​ gave me as insight into working on a research project; and allowed me to gain some knowledge of Machine Learning and Computer Vision.</p> 
+ <!--<p> I have experince in a wide range of programming languages including C++, C, Java, Python, Haskell, Pascal, PHP, Scala and Perl.</p> -->
+ 
+ 
 
- <p> <a href="cv.pdf">Download my CV </a><p>
+ <p> &nbsp;&nbsp;&nbsp;<a href="cv.pdf" class="btn btn-info" type="button">CV </a> <p>
+                </div>
+            </div>
+            
+            
+            
+            <a id="Dissertation"></a>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">MEng Dissertation : Artificial Immune System (AIS) for Tracking and Detecting Objects in Real-Time</h3>
+                </div>
+                <div class="panel-body">
+                 <p><a href="https://github.com/HelenHarman/AIS_Object_Tracking">https://github.com/HelenHarman/AIS_Object_Tracking</a></p>
+                 
+                 <p> <strong>  Abstract   </strong> </p>            
+                 <p>
+Our immune systems have evolved overtime to become extremely efficient at fighting off foreign bodies called pathogens. As new pathogens emerge are immune systems must adapt to deal with the pathogen using the knowledge gained when dealing with similar pathogens.</p>
+ <p>When it comes to detecting objects, the software must adapt to dealing with new perspectives of the object. These perspectives could be caused for example by a changing in lighting, the object rotating or by the camera moving. It traditional vision systems if the object changes considerably from the set of training data, then the object can no longer be detected.</p>
+ <p>Assuming that the objects appearance will only gradually change the artificial immune system can build up a network of appearances. Related appearances will be linked and over time the software should become more robust to large changes and noise. The more an appearance is used the higher weighting it will have within the network. If an appearance has not been seen for a set length of time then it will be removed from the network.</p>
+ <p>The appearances will be passed over the image and the Euclidean distance will be used to find the most likely position of the object. Several constraints and predictions will be put in place to improve the computational time, allowing the software to work on a real-time video feed.</p>
                 </div>
             </div>
             
@@ -160,18 +195,7 @@
             </div>
             
            
-            <a id="Dissertation"></a>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Dissertation : Artificial Immune System (AIS) for Tracking and Detecting Objects in Real-Time</h3>
-                </div>
-                <div class="panel-body">
-                 <p><a href="https://github.com/HelenHarman/AIS_Object_Tracking">https://github.com/HelenHarman/AIS_Object_Tracking</p>
-                 
-                                  
-                 
-                </div>
-            </div>
+            
             
             
             <a id="cern"></a>
